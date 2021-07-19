@@ -68,7 +68,7 @@ function switchSheet(currentSheet) {
     // set UI optimized..
     for (let i = 0; i < visitedCells.length; i++) {
         let { rowId, colId } = visitedCells[i];
-        let idx = Number(rowId) * 100 + Number(colId);
+        let idx = Number(rowId) * 26 + Number(colId);
         allCells[idx].textContent = db[rowId][colId].value;
 
     }
@@ -87,7 +87,7 @@ function attachEventListeners() {
 function cleanUI() {
     for (let i = 0; i < visitedCells.length; i++) {
         let { rowId, colId } = visitedCells[i];
-        let idx = Number(rowId) * 100 + Number(colId);
+        let idx = Number(rowId) * 26 + Number(colId);
 
         allCells[idx].innerHTML = "";
         // console.log(allCells[idx]);
