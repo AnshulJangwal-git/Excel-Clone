@@ -59,6 +59,9 @@ function attachClickAndBlurEventsOnCell() {
             underline && document.querySelector(".underline").classList.add("active-menu");
             italic && document.querySelector(".italic").classList.add("active-menu");
 
+            let textAlign = cellObject.textAlign;
+            document.querySelector("." + textAlign).classList.add("active-menu");
+
         });
 
         allCells[i].addEventListener("blur", function (e) {
