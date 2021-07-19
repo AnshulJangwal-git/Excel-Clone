@@ -1,0 +1,140 @@
+* {
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+}
+
+.menu-options {
+    height: 50px;
+    background: aquamarine;
+}
+
+.cells {
+    height: calc(100vh - 110px);
+    /* background: aliceblue; */
+    overflow: auto;
+    position: relative;
+}
+
+.sheets {
+    height: 30px;
+    background: lemonchiffon;
+    display: flex;
+    align-items: center;
+    overflow: auto;
+}
+
+.row {
+    display: flex;
+}
+
+.cell {
+    border: 0.5px solid lightgray;
+    min-width: 120px;
+    /* overflow: auto; */
+    min-height: 28px;
+    outline: none;
+    padding: 2px;
+    max-width: 120px;
+}
+
+.top-left-cell {
+    height: 28px;
+    background: lightgray;
+    width: 30px;
+    position: absolute;
+    z-index: 4 ;
+}
+
+.top-row {
+    display: flex;
+    /* min-width: 100px; */
+    /* border: 1px solid; */
+    position: absolute;
+    top: 0px;
+    left: 30px;
+    height: 28px;
+    z-index: 2;
+    background: white;
+    /* align-items: center; */
+}
+
+.top-row-cell {
+    min-width: 120px;
+    border: 1px solid lightgray;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 4px;
+}
+
+.left-col {
+    position: absolute;
+    top: 28px;
+    z-index: 2;
+    background: white ;
+}
+
+.left-col-cell {
+    height: 28px;
+    border: 1px solid lightgray;
+    width: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+
+.all-cells {
+    position: absolute;
+    top: 28px;
+    left: 30px;
+}
+
+.formula-tab {
+    height: 30px;
+    background: burlywood;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.formula-tab input {
+    height: 85%;
+    width: 180px;
+    margin: 4px;
+    padding: 2px;
+}
+
+.add-sheet {
+    margin-left: 10px;
+    margin-right: 10px;
+    /* border-right: 1px solid; */
+    cursor: pointer;
+}
+
+.sheets-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: 1px solid;
+    height: 98%;
+}
+
+.sheet {
+    height: 100%;
+    width: 100px;
+    border-right: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border-left: 1px solid; */
+    cursor: pointer;
+}
+
+.sheet.active-sheet {
+    /* background: white; */
+}
+
+.active-sheet {
+    background: white;
+}
